@@ -1,0 +1,42 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Docentes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        
+     </head>
+	 <body>
+	 	<div class="container-fluid">
+	 		<form method="post" th:action="@{/docente}" th:object="${crearDocente}">
+	 			<div class="form-group">
+	 				<label for="nombreDocente">Nombre</label>
+	 				<input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="ingresar nombre" th:field="*{nombreDocente}"/>
+	 			</div>
+	 			<div class="form-group">
+	 				<label for="apellidosDocente">Apellidos</label>
+	 				<input type="text" class="form-control" id="apellidos" aria-describedby="emailHelp" placeholder="ingresar apellido" th:field="*{apellidosDocente}"/>
+	 			</div>
+	 			<div class="form-group">
+	 				<label for="fechaDocente">Fecha</label>
+	 				<input type="text" class="form-control" id="fecha" aria-describedby="emailHelp" placeholder="ingresar fecha" th:field="*{fechaDocente}"/>
+	 			</div>
+	 			<div class="form-group">
+	 				<label for="telefonoDocente">Telefono</label>
+	 				<input type="text" class="form-control" id="fecha" aria-describedby="emailHelp" placeholder="ingresar telefono" th:field="*{telefonoDocente}"/>
+	 			</div>
+	 			<div class="form-group">
+	 				<label for="departamentoDocente">Departamento</label>
+	 				<input type="text" class="form-control" id="fecha" aria-describedby="emailHelp" placeholder="ingresar departamento" th:field="*{departamentoDocente}"/>
+	 			</div>
+	 			
+	 			<button type="submit" class="btn btn-primary">Agregar</button>	
+	 			
+	 		</form>
+	 	</div>
+	 </body>
+	 </html>
